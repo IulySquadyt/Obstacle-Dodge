@@ -7,11 +7,23 @@ public class Mover : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        PrintInstructions();
     }
 
     // Update is called once per frame
     void Update()
+    {
+        MovePLayer();
+    }
+
+    void PrintInstructions()
+    {
+        Debug.Log("Welcome to the game!");
+        Debug.Log("Use the arrow keys or WASD to move your character.");
+        Debug.Log("Don't bump into walls or objects!");
+    }
+
+    void MovePLayer() 
     {
         float xValue = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
         float yValue = 0f;
