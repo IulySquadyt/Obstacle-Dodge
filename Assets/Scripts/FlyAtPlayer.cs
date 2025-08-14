@@ -32,7 +32,6 @@ public class FlyAtPlayer : MonoBehaviour
 
     void Awake()
     {
-        playerPosition = player.transform.position;
         gameObject.SetActive(false);
     }
 }

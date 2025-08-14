@@ -14,7 +14,7 @@ public class TriggerProjectile : MonoBehaviour
         }
         if (other.gameObject.tag == "Player")
         {
-            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
 }
