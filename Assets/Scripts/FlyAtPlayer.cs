@@ -29,4 +29,10 @@ public class FlyAtPlayer : MonoBehaviour
     void MoveToPlayer() {
         transform.position = Vector3.MoveTowards(transform.position, playerPosition, projectileSpeed * Time.deltaTime);
     }
+
+    void Awake()
+    {
+        playerPosition = player.transform.position;
+        gameObject.SetActive(false);
+    }
 }
